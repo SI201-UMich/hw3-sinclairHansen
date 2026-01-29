@@ -80,7 +80,7 @@ class CouponDispenser:
                 random_coupon = random.randint(0, len(self.coupon_cards))
                 return self.coupon_cards[random_coupon]
         return name
-        
+    
         pass
 
     def distribute_session(self):
@@ -99,6 +99,19 @@ class CouponDispenser:
         Reminder: Use lists only (no dictionaries).
         """
         # TODO: Implement per instructions 
+        obj = CouponDispenser([])
+        running = True
+        while(running):
+            x = input("Enter a customer name (or names), 'show', or 'exit':")
+            if(x == 'exit'):
+                print("Goodbye!")
+                exit()
+            elif(x == 'show'):
+                print(obj)
+            else:
+                list_names = list(x.split(','))
+                obj = CouponDispenser(list_names)
+              
         pass
 
     def tally_distribution(self):
