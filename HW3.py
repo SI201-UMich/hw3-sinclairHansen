@@ -39,6 +39,7 @@ class CouponDispenser:
         # TODO: Implement per instructions
         pass
 
+
     def __str__(self):
         """
         Return a single string with all coupons in coupon_cards joined by pipes ('|').
@@ -47,6 +48,12 @@ class CouponDispenser:
         Returns:
             str
         """
+        coupon_str = ""
+        for coupon in self.coupon_cards:
+            coupon_str += coupon
+            coupon_str += '|'
+        return coupon_str
+    
         # TODO: Implement per instructions
         pass
 
